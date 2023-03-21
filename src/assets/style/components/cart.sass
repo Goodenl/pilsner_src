@@ -1,0 +1,50 @@
+.cart
+  display: flex
+  width: 100%
+  min-height: 100vh
+  margin-top: 85px
+
+  &__list
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    gap: 15px
+    width: 100%
+    
+  &__item
+    display: flex
+    padding: 10px 24px
+    justify-content: space-between
+    align-items: center
+    width: 100%
+
+    border-radius: 10px
+    box-shadow: 3px 3px 20px 0px rgba(var(--shadow3-color))
+
+  &__title
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    justify-content: center
+    gap: 4px
+
+  &__quantity
+    font-size: 14px
+  &__price
+    font-weight: 500
+    font-size: 16px
+
+  &__empty
+    display: flex
+    justify-content: center
+    width: 100%
+
+  .position-menu__footer  
+    bottom: 54px
+
+    &-action
+      padding: 0
+
+    .btn
+      width: 100%
+  

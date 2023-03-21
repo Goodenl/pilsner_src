@@ -1,0 +1,88 @@
+@keyframes slide 
+	0% 
+		transform: translate(0) scale(1.2)
+	
+	100% 
+		transform: translate(-200px) scale(1.2)
+
+.loading
+	display: flex
+
+	width: 100%
+	height: 100%
+	overflow: hidden
+
+	background-color: $accent
+	position: fixed
+	top: 0
+	bottom: 0
+	right: 0
+	left: 0
+
+	&__logo
+		width: calc(100% - 63px * 2)
+		z-index: 1
+		margin-bottom: 0
+
+		transition: margin-bottom .4s ease
+
+	&__info
+		width: 300px
+		height: 300px
+		display: flex
+		align-items: center
+		justify-content: center
+		flex-direction: column
+
+		margin: 0 auto
+		align-self: center
+
+		transition: width .3s ease, height .3s ease
+
+		h2
+			visibility: hidden
+
+		&--loaded
+			width: 192px
+			height: 129px
+
+			h2
+				visibility: visible
+
+			.loading__logo
+				width: calc(100% - 57.32px * 2)
+				margin-bottom: 50px
+
+	&__bg
+		position: absolute
+		width: 902px
+		height: 1039px
+
+		&-box
+			width: 100vh
+			height: 100vh
+			margin: 0 auto
+
+			object-fit: cover
+
+			opacity: .1
+
+			position: absolute
+			top: 0
+			bottom: -100px
+			left: calc(50% - (902px/2.9))
+			right: 0
+
+			z-index: -1
+
+			transform: rotate(30deg) scale(.9)
+
+			@include media($tablet-bp)
+				transform: rotate(30deg) scale(1.5)
+
+		&--top
+			animation: 3s ease-in-out 1 both running slide
+
+		&--bottom
+			top: 55px
+			animation: 3s ease-in-out 1 reverse both running slide

@@ -1,0 +1,173 @@
+.menu-card
+	margin-top: 35px
+	
+	h1
+		margin-bottom: 15px
+
+	&__list
+		display: flex
+		gap: 15px 11px
+		justify-content: space-between
+		flex-wrap: wrap
+
+	&__item
+		flex: 0 1 calc(50% - 6px)
+		min-height: 251px
+		display: flex
+		flex-direction: column
+		overflow: hidden
+		border-radius: 10px
+		box-shadow: $shadow3
+
+	&__header
+		position: relative
+
+	&__img
+		display: block
+		object-fit: cover
+		width: 100%
+		height: 120px
+
+		border-radius: 0 0 15px 0
+
+		&--no-photo
+			object-fit: contain
+			padding: 20px
+
+	&__promo-text
+		position: absolute
+		top: 0
+		left: 0
+		padding: 8px
+		padding-left: 7px
+
+		text-transform: uppercase
+		font-size: 12px
+		font-weight: 700
+		line-height: 1.2
+		letter-spacing: 0.03em
+		text-align: center
+		color: $white
+
+		border-radius: 10px 0px
+		background: $accent
+
+		box-shadow: $shadow4
+
+	&__icons
+		display: flex
+		position: absolute
+		bottom: 0
+		right: 0
+
+	&__info
+		background-color: $accent
+		border-radius: 10px 0 0 10px
+		padding: 2px 3px
+		padding-right: 18px
+		margin-right: -15px
+
+	&__icons-list
+		display: flex
+		gap: 0 5px
+		background-color: $white
+		border-radius: 15px 0 10px 0
+		padding: 2px 4px 2px 5px
+		box-shadow: $shadow4
+		position: relative
+
+		&:before, &:after
+			content: ''
+			display: block
+			width: 10px
+			height: 10px
+
+			position: absolute
+			background: url('/pwa/icons/icons-list-corner.svg')
+
+		&:after
+			top: -10px
+			right: 0
+
+		&:before
+			bottom: 0px
+			left: -10px
+
+		&--position
+			position: absolute
+			bottom: 0
+			right: 0
+			border-radius: 15px 0 0 0
+			padding: 5px 10px 0
+
+			&:before, &:after
+				transform: scale(1.8)
+			
+			&:after
+				top: -14px
+				right: 4px
+
+			&:before
+				bottom: 3px
+				left: -12px
+
+
+	&__icons-item
+		width: 16px
+		height: 16px
+
+		&--position
+			width: 30px
+			height: 30px
+			img
+				width: 30px
+				height: 30px
+
+	&__footer
+		display: flex
+		flex-direction: column
+		height: 100%
+		justify-content: space-between
+		padding: 12px 10px 10px
+
+		.btn
+			height: 40px
+
+	&__text
+		display: flex
+		flex-direction: column
+		gap: 5px 0
+		margin-bottom: 10px
+
+	&__quantity
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+		.btn
+			width: 40px
+			height: 40px
+			padding-bottom: 3px
+			padding-left: 1px
+			padding-top: 0
+			padding-right: 0
+			font-weight: 300
+			
+			line-height: 1
+			font-size: 32px
+
+		&--position-menu
+			width: 119px
+
+	&__quantity-count
+		font-size: 17px
+		font-weight: 600
+		line-height: 22px
+		letter-spacing: 0em
+
+	&__quantity-text
+		opacity: 1 !important
+		display: flex
+		gap: 0 5px
+		span:last-child
+			opacity: .6

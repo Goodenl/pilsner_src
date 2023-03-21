@@ -1,0 +1,61 @@
+.menu-sheets
+	position: relative
+
+	&__header
+		position: fixed
+		top: 0
+		left: 0
+		right: 0
+		padding-bottom: 21px
+		padding-top: 30px
+		background-color: $primary-light
+		z-index: 3
+
+		.container
+			display: flex
+			justify-content: space-between
+			align-items: center
+
+	&__address
+		display: flex
+		gap: 0 17.5px
+		align-items: center
+
+		img
+			width: 9px
+			height: 6px
+	
+	&__actions
+		display: flex
+		gap: 0 15px
+		align-items: center
+
+	&__menu
+		margin-top: 30px
+		padding-top: 10px
+		min-height: 100%
+		background-color: $white
+		border-radius: 20px 20px 0px 0px
+		position: relative
+		z-index: 2
+		margin-top: 92px
+		padding-bottom: 53px
+
+	&__cards
+		&--fixed-tabs
+			padding-top: 55px
+
+	&--market
+		background-color: rgba($primary-rgb, .05)
+
+		.menu-tab
+			border-radius: 20px 20px 0 0
+			position: sticky
+
+			&--fixed
+				border-radius: 0
+				position: fixed	
+
+		.menu-sheets
+			&__menu
+				margin-top: 302px

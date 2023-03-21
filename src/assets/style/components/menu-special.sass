@@ -1,0 +1,56 @@
+.menu-special
+	position: fixed
+	top: 76px
+	z-index: 2
+
+	&__title
+		display: flex
+		justify-content: space-between
+		margin-bottom: 19px
+
+	&__more
+		width: 30px
+		height: 30px
+
+	&__board
+		display: flex
+		flex-direction: column
+		justify-content: flex-end
+		height: 176px
+		border-radius: 8px
+		overflow: hidden
+
+		z-index: 0
+
+		position: relative
+
+		box-shadow: $shadow2
+
+		&:after
+			content: ""
+			display: block
+			position: absolute
+			left: 0
+			right: 0
+			top: 50%
+			bottom: 0
+
+			background: linear-gradient(180deg, rgba(22, 25, 29, 0) 6.82%, rgba(22, 25, 29, 0.9) 100%)
+		
+	&__bg
+		display: block
+		width: 100%
+		height: auto
+		object-fit: cover
+
+		position: absolute
+
+		z-index: -1
+
+	&__text
+		display: flex
+		flex-direction: column
+		gap: 5px 0
+		padding-left: 15px
+		padding-bottom: 13px
+		z-index: 1

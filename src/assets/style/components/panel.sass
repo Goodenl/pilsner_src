@@ -1,0 +1,98 @@
+.panel
+	&__list
+		display: flex
+		flex-direction: column
+		gap: 20px
+		margin-bottom: 20px
+
+	&__wrap
+		display: flex
+		align-items: center
+		padding: 25px
+		justify-content: space-between
+
+		&--p20
+			padding: 20px
+
+		&--news-promo
+			padding: 33px 24px 32px 29px
+			img
+				width: 114.4px
+				height: 103px
+
+			h2
+				border-left: 1px solid #E9E9EC
+				padding-left: 30px
+				min-height: 92px
+				display: flex
+				align-items: center
+			> *
+				width: 50%
+
+	&__text
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+
+		span
+			display: flex
+			align-items: baseline
+			gap: 0 8px
+
+		p
+			&.panel-bonus
+				margin-top: 5px
+				margin-bottom: 3px
+			&.panel-patch
+				margin-top: 15px
+				margin-bottom: 10px
+
+	&__bg
+		position: absolute
+		z-index: -1
+		object-fit: cover
+		width: 100%
+		height: 157px
+		display: block
+
+	&__item
+		height: 157px
+		overflow: hidden
+
+		background-color: $white
+		border-radius: 10px
+		box-shadow: $shadow3
+
+		z-index: 0
+
+		position: relative
+
+		.title__about
+			font-size: 60px
+			font-weight: 700
+			line-height: 60px
+			letter-spacing: 0em
+
+			position: absolute
+			bottom: -9px
+			left: -8.5px
+
+		&--accent
+			background-color: $accent
+		&--primary
+			background-color: rgb($primary-rgb)
+
+	&__patch
+		&-list
+			display: flex
+			gap: 0 8px
+		&-item
+			display: flex
+			align-items: center
+			justify-content: center
+			width: 25px
+			height: 25px
+			background-color: transparent
+			border-radius: 5px
+			&--has
+				background-color: $white

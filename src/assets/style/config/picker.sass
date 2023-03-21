@@ -1,0 +1,109 @@
+.picker
+	&__list
+		display: flex
+		flex-direction: column
+		gap: 10px 0
+		margin-bottom: 36px
+
+		h3
+			margin-bottom: 10px
+
+	&__item
+		display: flex
+		align-items: center
+		height: 40px
+		padding: 0 0 0 3px
+
+		p
+			margin-top: 2px
+
+	&__marker
+		display: flex
+		align-items: center
+		justify-content: center
+		min-width: 24px
+		max-width: 24px
+		min-height: 24px
+		max-height: 24px
+		
+		background-color: rgba($primary-rgb, .15)
+
+		transition: background-color .3s ease
+
+		&--checkbox
+			border-radius: 5px
+
+			&:after
+				content: url('/pwa/icons/checked.svg')
+				position: relative
+				visibility: hidden
+
+				align-self: center 
+				
+				filter: drop-shadow( 2px 4px 8px rgba(var(--shadow4-color)))
+				
+				transform: scale(0)
+				transition: transform .3s ease
+
+		&--radio
+			border-radius: 50%
+
+			&:after
+				content: ''
+				position: relative
+				visibility: hidden
+
+				width: 8px
+				height: 8px
+				
+				border-radius: 50%
+				background-color: $white
+				
+				box-shadow: $shadow4
+				
+				transform: scale(0)
+				transition: transform .3s ease
+
+
+	&__between
+		display: flex
+		justify-content: space-between
+		align-items: center
+		width: 100%
+
+		span
+			transition: color .3s ease
+
+	&__checkbox-content
+		display: flex
+		justify-content: flex-start
+		align-items: center
+		width: 100%
+
+		.menu-card__quantity
+			margin-left: 16px
+
+		p
+			margin-right: auto
+		span
+			transition: color .3s ease
+
+	&__label
+		display: flex
+		width: 100%
+		gap: 0 18px
+		align-items: center
+
+		input[type="radio"],
+		input[type="checkbox"]
+			display: none
+
+			&:checked ~ .picker__marker
+				background-color: $accent
+				&:after
+					visibility: visible
+					transform: scale(1)
+
+	&--selected
+		span
+			color: $accent
